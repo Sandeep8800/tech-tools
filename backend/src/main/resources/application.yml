@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: tts-assistant-backend
+
+  # Spring AI Multi-Model Configuration
+  ai:
+    # OpenAI Settings
+    openai:
+      api-key: ${OPENAI_API_KEY:}
+      chat:
+        options:
+          model: gpt-4o
+
+    # Ollama Settings (Local Models)
+    ollama:
+      base-url: ${OLLAMA_BASE_URL:http://localhost:11434}
+      chat:
+        options:
+          model: qwen3:30b
+
+    # Anthropic Claude Settings
+    anthropic:
+      api-key: ${ANTHROPIC_API_KEY:}
+      chat:
+        options:
+          model: claude-3-5-sonnet-20241022
+
+    # Google AI Studio Gemini Settings
+    google:
+      api-key: ${GEMINI_API_KEY:}
+      chat:
+        options:
+          model: gemini-1.5-pro
+
+# Server Settings
+server:
+  port: 8080
+  error:
+    include-message: always
+
+logging:
+  level:
+    org.springframework.web: INFO
+    org.springframework.ai: INFO
+    com.tts.assistant: DEBUG

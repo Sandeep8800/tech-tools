@@ -1,0 +1,6 @@
+{
+  "name": "Tech and Tool Workspace",
+  "description": "A standalone React chat application that connects to Ollama for LLM inference and a Superset (BiDarshan) MCP server for tools execution.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
